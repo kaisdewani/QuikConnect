@@ -4,7 +4,7 @@ class AccountsController < ApplicationController
     end
 
     def creat
-        @account = Account.new(account_params)
+       @account = Account.new(account_params)
         if @task.save
             redirect_to account_path, notice: 'Contact information account was successfully created.'
           else
@@ -15,12 +15,13 @@ class AccountsController < ApplicationController
 
     def update
        @account = Task.find(params[:id])
+       redirect_to accounts_path notice: "contact information was successfully updated"
     end
     
      # DELETE /acount/1
     def destory
         @account = Account.destory
-        redirect_to accounts_path, notice: 'Task was successfully destroyed.'
+        redirect_to accounts_path, notice: 'Contact information account was successfully destroyed.'
     end
    
 
