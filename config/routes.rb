@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'home#index'
+  root 'twilio#index'
 
   devise_for :users
   resources :accounts, only: [:index, :create, :destroy, :update]
