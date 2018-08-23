@@ -2,7 +2,6 @@ class TwilioController < ApplicationController
   
 
   def index
-  # Your Account Sid and Auth Token from twilio.com/console
   account_sid = 'AC5e3c8587859bddd02c0d56bebc8be376'
   auth_token = 'ea8c5cb3966527dadcf13a1a4399d000'
   client = Twilio::REST::Client.new(account_sid, auth_token)
