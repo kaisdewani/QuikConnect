@@ -53,3 +53,12 @@ ul.hmenu li {
 .app-log-in {
     text-align: center;
 }
+
+#cancel-account {
+    text-align: center;
+    margin: 25px;
+}
+
+#notice-alert {
+    text-align: center;
+}
