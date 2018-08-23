@@ -8,7 +8,7 @@
 
 User.destroy_all
 
-u = User.create(email: "mail@email.com", password: "password")
+u = User.create(email: "mail@example.com", password: "password")
 u.accounts << Account.create(name: Faker::Company.name, url: Faker::Internet.url, phone_number: Faker::PhoneNumber.cell_phone )
 u.accounts << Account.create(name: Faker::Company.name, url: Faker::Internet.url, phone_number: Faker::PhoneNumber.cell_phone )
 u.accounts << Account.create(name: Faker::Company.name, url: Faker::Internet.url, phone_number: Faker::PhoneNumber.cell_phone )
@@ -20,4 +20,4 @@ u.accounts << Account.create(name: Faker::Company.name, url: Faker::Internet.url
     u.accounts << Account.create(name: Faker::Company.name, url: Faker::Internet.url)
 end
 
-puts "Created #{User.count} users and #{Account.count} accounts. (and Izzy rules)"
+puts "Created #{User.count} users and #{Account.count} accounts."
