@@ -1,5 +1,5 @@
 {
-  "name": "quikpractice",
+  "name": "quikconnect",
   "private": true,
   "dependencies": {
     "@rails/webpacker": "3.5",
