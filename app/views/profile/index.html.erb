@@ -1,0 +1,15 @@
+<h1>Profile</h1>
+<br/>
+<% @user.each do |item| %>
+  <%= item.email %>
+<% end %>
+<br/>
+<br/>
+<% @user.each do |item| %>
+  <%= item.created_at %>
+<% end %>
+<br/>
+<br/>
+<% @user.each do |item| %>
+  <%= item.updated_at %>
+<% end %>
