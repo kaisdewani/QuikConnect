@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(version: 2018_08_26_220053) do
   create_table "profiles", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "personal_email"
     t.string "personal_phone"
     t.string "personal_address"
     t.datetime "created_at", null: false

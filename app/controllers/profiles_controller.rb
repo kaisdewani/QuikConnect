@@ -1,6 +1,11 @@
 class ProfilesController < ApplicationController
+  before_action :find_profile, only: [:show, :edit, :update, :destroy]
+  
   def index
     @profiles = Profile.all.order("created_at DESC")
+  end
+
+  def show
   end
 
   def new
@@ -9,12 +14,28 @@ class ProfilesController < ApplicationController
 
   def create
     @profile = Profile.new(profile_params)
-
     if @profile.save
       redirect_to root_path
     else
       rener 'new'
     end
+  end
+
+
+  def edit
+  end
+
+  def update
+    if @profile.update(profile_params)
+      redirect_to profile_path(@profile)
+    else
+      render 'edit'
+    end
+  end
+
+  def destroy
+    @profile.destroy
+    redirect_to root_path
   end
 
   private
@@ -23,4 +44,9 @@ class ProfilesController < ApplicationController
                                     :personal_email, :personal_phone, 
                                     :personal_address)
   end
+
+  def find_profile
+    @profile = Profile.find(params[:id])
+  end
+
 end

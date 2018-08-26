@@ -1,4 +1,6 @@
 <h1>Index view</h1>
 <% @profiles.each do |profile|%>
-  <h2><%= profile.first_name %></h2>
+  <h2><%= link_to profile.first_name, profile_path(profile) %></h2>
 <% end %>
+
+<%= link_to "Add new", new_profile_path %>
