@@ -1,5 +1,6 @@
 class ProfilesController < ApplicationController
-  def index 
+  def index
+    @profiles = Profile.all.order("created_at DESC")
   end
 
   def new
