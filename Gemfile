@@ -6,7 +6,7 @@ ruby '2.5.1'
 gem 'simple_form'
 gem 'bootstrap-sass'
 gem 'devise'
-
+gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record

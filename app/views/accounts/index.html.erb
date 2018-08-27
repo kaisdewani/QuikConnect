@@ -1,7 +1,12 @@
+<h1>Current Accounts</h1>
 <ul>
 <% @accounts.each do |account| %>
-  <li><%= account.name%> | <%= account.url%> | (link to delete)</li>
+  <li><%= account.name%> | <%= account.url%> | (link to create)</li>
 <% end %>
 </ul>
 
-Form to make new account
+<%= link_to "Add New account", new_account_path %>
+<hr>
+<%= link_to "Delete account", new_account_path %>
+
+

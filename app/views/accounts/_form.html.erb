@@ -1,0 +1,5 @@
+<%= simple_form_for @account, url: accounts_path do |f| %>
+  <%= f.input :name, label: "Company Name", placeholder: "GitHub" %>
+  <%= f.input :url, label: "Url", placeholder: "url" %>
+  <%= f.button :submit %>
+<% end %>

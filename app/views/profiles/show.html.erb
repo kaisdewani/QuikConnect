@@ -1,6 +1,6 @@
 <h2><%= @profile.first_name %></h2>
-<h3><%= @profile.personal_email %></h3>
+<h3><%= @profile.personal_phone %></h3>
 
 <%= link_to 'Back', root_path %>
-<%= link_to 'Edit', edit_profile_path(@profile)%>
-<%= link_to 'Delete', profile_path(@profile), method: :delete, data: { confirm: "Are You Sure?" }%>
+<%= link_to 'Edit', edit_profiles_path(@profile)%>
+<%= link_to 'Delete', profiles_path(@profile), method: :delete, data: { confirm: "Are You Sure?" }%>
