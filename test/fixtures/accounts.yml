@@ -1,15 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  linkedin: MyString
-  github: MyString
-  facebook: MyString
-  instagram: MyString
-  email: MyString
+  name: MyString
+  url: MyString
+  user: one
 
 two:
-  linkedin: MyString
-  github: MyString
-  facebook: MyString
-  instagram: MyString
-  email: MyString
+  name: MyString
+  url: MyString
+  user: two

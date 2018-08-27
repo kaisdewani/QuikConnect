@@ -10,16 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_27_025541) do
+ActiveRecord::Schema.define(version: 2018_08_27_194020) do
 
   create_table "accounts", force: :cascade do |t|
-    t.string "linkedin"
-    t.string "github"
-    t.string "facebook"
-    t.string "instagram"
-    t.string "email"
+    t.string "name"
+    t.string "url"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_accounts_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|
@@ -29,6 +28,8 @@ ActiveRecord::Schema.define(version: 2018_08_27_025541) do
     t.string "personal_address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
