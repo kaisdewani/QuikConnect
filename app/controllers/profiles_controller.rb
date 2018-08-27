@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
     if @profile.save
       redirect_to root_path
     else
-      rener 'new'
+      render 'new'
     end
   end
 
@@ -42,7 +42,7 @@ class ProfilesController < ApplicationController
   def profile_params
     params.require(:profile).permit(:first_name, :last_name, 
                                     :personal_email, :personal_phone, 
-                                    :personal_address)
+                                    :personal_address, :linkedin)
   end
 
   def find_profile
