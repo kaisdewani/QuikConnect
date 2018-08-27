@@ -15,13 +15,54 @@
  */
 
 ul.hmenu {
-    list-style: none;
-    margin: 0 0 2em;
-    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    padding-left: 20px;
+    margin-top: 25px;
 }
 
 ul.hmenu li {
     display: inline;
+    text-align: center;
+}
+
+.app-name {
+    text-align: center;
+}
+
+.app-message {
+    text-align: center;
+}
+
+.field {
+    text-align: center;
+}
+
+.app-sign-up {
+    text-align: center;
+}
+
+.reg-edit {
+    text-align: center;
+}
+
+.actions {
+    text-align: center;
+}
+
+.app-log-in {
+    text-align: center;
+}
+
+#cancel-account {
+    text-align: center;
+    margin: 25px;
+}
+
+#notice-alert {
+    text-align: center;
+}
+=======
     margin-left: 25px;
     padding-left: 125px;
 }
