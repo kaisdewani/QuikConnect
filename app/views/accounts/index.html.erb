@@ -2,11 +2,12 @@
 <ul>
 <% @accounts.each do |account| %>
   <li><%= account.name%> | <%= account.url%> | (link to create)</li>
+  <%= button_to "Delete account", account_path(account.id), :method => :delete %>
 <% end %>
 </ul>
 
 <%= link_to "Add New account", new_account_path %>
 <hr>
-<%= link_to "Delete account", new_account_path %>
+
 
 

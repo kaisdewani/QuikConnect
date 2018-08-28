@@ -20,7 +20,7 @@ class AccountsController < ApplicationController
   end
 
   def destroy
-    @account = current_user.account.destory
+    Account.find(params[:id]).destroy
     redirect_to accounts_path, notice: 'Contact information account was successfully deleted.'
   end
 
