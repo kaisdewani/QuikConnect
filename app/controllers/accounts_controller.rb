@@ -19,6 +19,10 @@ class AccountsController < ApplicationController
     @accounts = current_user.accounts
   end
 
+  def show 
+    @account = Account.find(params[:id])
+  end 
+
   def destroy
     Account.find(params[:id]).destroy
     redirect_to accounts_path, notice: 'Contact information account was successfully deleted.'
@@ -26,6 +30,21 @@ class AccountsController < ApplicationController
 
   def new
     @account = Account.new
+  end
+
+  def edit 
+    @account = Account.find(params[:id])
+  end 
+
+  def update
+    @account = Account.find(params[:id])
+    respond_to do |format|
+      if @account.update(account_params)
+        format.html { redirect_to accounts_path, notice: "Account was successfully updated"}
+      else 
+        format.html { render :edit }
+      end 
+    end 
   end
 
   private

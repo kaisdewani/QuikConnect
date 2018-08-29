@@ -3,8 +3,10 @@
 <% @accounts.each do |account| %>
   <li><%= account.name%> | <%= account.url%> | (link to create)</li>
   <%= button_to "Delete account", account_path(account.id), :method => :delete %>
+  <p><%= link_to "Edit", edit_account_path(account)  %></p>
 <% end %>
 </ul>
+
 
 <%= link_to "Add New account", new_account_path %>
 <hr>
