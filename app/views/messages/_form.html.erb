@@ -1,0 +1,10 @@
+<%= form_tag("text", method: "post") do %>
+  <%= label_tag(:number, "Phone Number:") %>
+  <%= telephone_field(:number, :phone) %>
+    <br>
+  <%= label_tag(:message, "Message:") %>
+  <br>
+  <%= text_area_tag(:message, "", size: "30x2") %>
+   <br>
+  <%= submit_tag("Send") %>
+<% end %>
