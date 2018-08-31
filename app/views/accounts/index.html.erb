@@ -1,5 +1,6 @@
 <h1>Current Accounts</h1>
 <ul>
+
 <%= form_tag shares_path do %>
   <% @accounts.each do |account| %>
     <li> <%= check_box_tag("share[#{account.id}]") %> | <%= account.name%> | <%= account.url%> </li>
@@ -12,6 +13,14 @@
 </ul>
 
 <%= link_to "Add New account", new_account_path %>
+
+
+
+<br>
+<br>
+<hr>
+
+<%= render "message_form", message: @message %>
 
 <hr>
 
