@@ -22,14 +22,18 @@ class MessagesController < ApplicationController
 
       def email 
         email = params.fetch("email")
-        message = params.fetch("message") 
+        account_urls = params.fetch("account_urls")
+        message = ""
+        account_urls.each{| url | message += "#{url}\n" }
         AccountMailer.new_message(email,message).deliver_now
       end 
 
       def text
         p params
         number = params.fetch("number").fetch("phone")
-        message = params.fetch("message")
+        account_urls = params.fetch("account_urls")
+        message = ""
+        account_urls.each{| url | message += "#{url}\n" }
         p [number, message]
         client = Twilio::REST::Client.new
         options = {
