@@ -22,8 +22,8 @@ class MessagesController < ApplicationController
 
       def email 
         email = params.fetch("email")
-        mail = params.fetch("message")
-        AccountMailer.new_message(@message).deliver_now
+        message = params.fetch("message") 
+        AccountMailer.new_message(email,message).deliver_now
       end 
 
       def text
