@@ -1,0 +1,12 @@
+
+<br>
+<br>
+<%= form_tag("messages/email", method: "post") do %>
+<%= label_tag(:email, "Email Address:") %> <%= text_field_tag 'email', ''%>
+<br>
+<%= label_tag(:message, "Message:") %>
+<br>
+<%= text_area_tag(:message, "", size: "30x2") %>
+<br>
+<%= submit_tag("Send") %>
+<%end%>
