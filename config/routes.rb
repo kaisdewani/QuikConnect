@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'profiles#edit'
+  root 'profiles#index'
+  post '/messages/email'
   post '/messages/text', to: 'messages#text'
   devise_for :users
   resource :profiles

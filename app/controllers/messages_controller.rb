@@ -20,6 +20,12 @@ class MessagesController < ApplicationController
         @account = Account.new
       end
 
+      def email 
+        email = params.fetch("email")
+        mail = params.fetch("message")
+        AccountMailer.new_message(@message).deliver_now
+      end 
+
       def text
         p params
         number = params.fetch("number").fetch("phone")
@@ -34,7 +40,4 @@ class MessagesController < ApplicationController
         p options
         p client.messages.create(options)
       end
-
-      
- 
 end
