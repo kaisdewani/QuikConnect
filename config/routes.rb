@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   post '/messages/text', to: 'messages#text'
   devise_for :users
   resource :profiles
-  resources :accounts
-  resources :messages, only: [:create, :index, :new]
-
+  resources :accounts, except: [:show]
+  resource :shares, only: [:create, :show]
 end
