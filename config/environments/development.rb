@@ -63,13 +63,13 @@ Rails.application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    address:"smtp.gmail.com",
-    port:587,
-    domain: 'example.com',
-    authentication: "plain",
-    user_name: "misspena21@.com",
-    password:"pw",
-    enable_starttls_auto: true
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :domain => 'localhost:3000',
+    :user_name => "quikexample@gmail.com",
+    :password => "D9R-ovz-DUt-RkJ",
+    :authentication => :plain,
+    :enable_starttls_auto => true
   }
   config.action_mailer.default_url_options = {host: "localhost:3000"}
   config.action_mailer.preview_path = "#{Rails.root}/test/mailers/previews"
