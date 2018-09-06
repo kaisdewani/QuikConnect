@@ -3,7 +3,9 @@
   <%= link_to "Add New Profile", new_profiles_path %>
 <% else %>
   <h2><%= link_to @profile.first_name, profiles_path(@profile) %></h2>  
+  
 <% end %>
+
 
 
 

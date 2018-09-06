@@ -1,10 +1,12 @@
 <%= form_tag("messages/text", method: "post") do %>
-  <% @accounts.each do |account| %>
-    <%= label_tag(:account_name, account.name) %>
-    <%= check_box_tag 'account_urls[]', account.url %>
-  <% end %>
-  <%= label_tag(:number, "Phone Number:") %>
+ <%= label_tag(:number, "Phone Number:") %>
   <%= telephone_field(:number, :phone) %>
-   <br>
+
   <%= submit_tag("Send") %>
 <% end %>
+  <% @accounts.each do |account| %>
+    <%= check_box_tag 'account_urls[]', account.url %>
+    <%= label_tag(:account_name, account.name) %>
+  
+  <% end %>
+ 

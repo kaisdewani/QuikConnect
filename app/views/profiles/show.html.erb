@@ -1,5 +1,6 @@
 <h2><%= "#{@profile.first_name}" %><%= " #{@profile.last_name}"%></h2>
 <h3><%= "Phone Number: #{@profile.personal_phone}" %></h3>
+<h3><%= "Adress: #{@profile.personal_address}" %></h3>
 
 <%= link_to 'Back', root_path %>
 <%= link_to 'Edit', edit_profiles_path(@profile)%>
