@@ -3,9 +3,8 @@
   <%= telephone_field(:number, :phone) %>
 
   <%= submit_tag("Send") %>
-<% end %>
   <% @accounts.each do |account| %>
     <%= check_box_tag 'account_urls[]', account.url %>
     <%= label_tag(:account_name, account.name) %>
-  
   <% end %>
+<% end %>

@@ -2,9 +2,9 @@
  <%= label_tag(:string, "Email :") %>
  <%= email_field(:string, :email) %>
  <%= submit_tag("Send") %>
-<% end %> 
+
  <% @accounts.each do |account| %>
     <%= label_tag(:account_name, account.name) %>
     <%= check_box_tag 'account_urls[]', account.url %>
   <% end %>
-  
+<% end %> 
