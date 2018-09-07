@@ -4,6 +4,8 @@ class ProfilesController < ApplicationController
 
   def index
     @profile = current_user.profile
+    @accounts = current_user.accounts
+
   end 
 
   def create
