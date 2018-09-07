@@ -1,10 +1,22 @@
-<h1>Index view</h1>
+<h1>Quick Connect</h1>
 <% if @profile.first_name.nil? %>
   <%= link_to "Add New Profile", new_profiles_path %>
 <% else %>
   <h2><%= link_to @profile.first_name, profiles_path(@profile) %></h2>  
-  
+
 <% end %>
+
+<%= render "message_form", message: @message %>
+<br>
+<br>
+
+<%= render "email_form", message: @message %>
+
+
+
+
+
+
 
 
 

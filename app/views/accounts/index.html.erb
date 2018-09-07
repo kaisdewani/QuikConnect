@@ -1,29 +1,17 @@
 <h1>Current Accounts</h1>
 <ul>
-
 <%= form_tag shares_path do %>
   <% @accounts.each do |account| %>
-    <li> <%= check_box_tag("share[#{account.id}]") %> | <%= account.name%> | <%= account.url%> </li>
-  <%= link_to "Delete account", account_path(account.id), :method => :delete %>
-<%= link_to "Edit account", edit_account_path(account.id)  %>
+    <li> <%= account.name%> | <%= account.url%> </li>
+  <%= link_to "Delete", account_path(account.id), :method => :delete %>
+<%= link_to "Edit", edit_account_path(account.id)  %>
   <% end %>
 <% end %>
-
 </ul>
 
 <%= link_to "Add New account", new_account_path %>
 
 
-
-<br>
-<br>
-<hr>
-
-<%= render "message_form", message: @message %>
-
-<%= render "email_form", message: @message %>
-
-<hr>
 
 
 
