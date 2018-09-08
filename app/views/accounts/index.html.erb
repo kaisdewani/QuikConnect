@@ -1,14 +1,16 @@
 <h1>Current Accounts</h1>
-<ul>
+</br>
+<ul class="list-unstyled">
 <%= form_tag shares_path do %>
   <% @accounts.each do |account| %>
-    <li> <%= account.name%> | <%= account.url%> </li>
+    <li><h3><%= account.name%> | <%= account.url%></h3> </li>
   <%= link_to "Delete", account_path(account.id), :method => :delete %>
 <%= link_to "Edit", edit_account_path(account.id)  %>
   <% end %>
 <% end %>
 </ul>
-
+</br>
+</br>
 <%= link_to "Add New account", new_account_path %>
 
 
