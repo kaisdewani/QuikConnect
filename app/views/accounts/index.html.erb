@@ -1,5 +1,7 @@
+<div class="card card-profile text-center">
 <h1>Current Accounts</h1>
 </br>
+
 <ul class="list-unstyled">
 <%= form_tag shares_path do %>
   <% @accounts.each do |account| %>
@@ -11,7 +13,9 @@
 </ul>
 </br>
 </br>
+
 <%= link_to "Add New account", new_account_path %>
+</div>
 
 
 

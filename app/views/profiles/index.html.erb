@@ -1,11 +1,28 @@
-<h1>Quick Connect</h1>
+<h1 class="home-title">Quick Connect</h1>
 <% if @profile.first_name.nil? %>
   <%= link_to "Add New Profile", new_profiles_path %>
-<% else %>
-  <h2><%= link_to @profile.first_name, profiles_path(@profile) %></h2>  
-
 <% end %>
 
+<div class="card card-profile text-center">
+  <img alt="" class="card-img-top" src="https://unsplash.it/340/160?image=354">
+  <div class="card-block">
+    <img alt="" class="card-img-profile text-center" src="https://it.gravatar.com/userimage/3434071/205a00fc16ae537b26b56f40790910fe.jpg?size=140">
+    <h4 class="card-title">
+      Nicola Pressi
+      <small>Front-end designer</small>
+      <%= render "message_form", message: @message %>
+<br>
+<br>
+
+<%= render "email_form", message: @message %>
+    </h4>
+    <div class="card-links">
+      <a class="fa fa-dribbble" href="#"></a>
+      <a class="fa fa-twitter" href="#"></a>
+      <a class="fa fa-facebook" href="#"></a>
+    </div>
+  </div>
+</div>
 <%= render "message_form", message: @message %>
 <br>
 <br>

@@ -1,3 +1,120 @@
 // Place all the styles related to the Profiles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$bg-start: #9d9181;
+$bg-end: #9e866c;
+$card-bg: #e6e5e1;
+$dribbble-color: #ea4b89;
+$twitter-color: #68aade;
+$facebook-color: #3b5999;
+
+
+body {
+	background-color: transparent;
+}
+
+.home-title{
+    font-size: 75px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 4px 4px 0 rgba(0,0,0,.75);
+      -webkit-transform: translate3d(-50%,-50%,0);
+         -moz-transform: translate3d(-50%,-50%,0);
+          -ms-transform: translate3d(-50%,-50%,0);
+           -o-transform: translate3d(-50%,-50%,0);
+              transform: translate3d(-50%,-50%,0);
+
+}
+
+.message-label{
+    color: #fff;
+    text-align: left;
+    font-size: 40px;
+    text-shadow: 2px 2px 0 rgba(0,0,0,.75);
+      
+
+
+}
+
+
+.card-profile {
+  width: 1000px;
+  margin: 50px auto;
+  background-color: $card-bg;
+  border-radius: 0;
+  border: 0;
+  box-shadow: 1em 1em 2em rgba(0,0,0,.2);
+  
+  
+  .card-img-top {
+    border-radius: 0;
+    width: 1000px;
+    height: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .card-img-profile {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-top: -95px;
+    margin-bottom: 35px;
+    border: 5px solid $card-bg;
+  }
+
+  .card-title {
+    margin-bottom: 100px;
+
+    small {
+      display: block;
+      font-size: .6em;
+      margin-top: .2em;
+    }
+  }
+  
+  .card-links {
+    margin-bottom: 25px;
+
+    .fa {
+      margin: 0 1em;
+      font-size: 1.6em;
+      
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+      
+      &.fa-dribbble {
+        color: $dribbble-color;
+        font-weight: bold;
+        
+        &:hover {
+          color: darken($dribbble-color, 10%);
+        }
+      }
+
+      &.fa-twitter {
+        color: $twitter-color;
+
+        &:hover {
+          color: darken($twitter-color, 10%);
+        }
+      }
+      
+      &.fa-facebook {
+        color: $facebook-color;
+
+        &:hover {
+          color: darken($facebook-color, 10%);
+        }
+      }
+    }
+  }
+}
