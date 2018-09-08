@@ -1,10 +1,13 @@
 <%= form_tag("messages/text", method: "post") do %>
+<div class= "message-label">
  <%= label_tag(:number, "Phone Number:") %>
   <%= telephone_field(:number, :phone, class: "form-control") %>
-
-  <%= submit_tag("Send", class: "btn btn-primary") %>
+  <div>
   <% @accounts.each do |account| %>
     <%= check_box_tag 'account_urls[]', account.url, class: "form-check-input" %>
     <%= label_tag(:account_name, account.name) %>
   <% end %>
+  <br>
+   <br>
+   <%= submit_tag("Send", class: "btn btn-primary") %>
 <% end %>
