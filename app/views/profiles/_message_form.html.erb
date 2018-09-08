@@ -1,9 +1,8 @@
 <%= form_tag("messages/text", method: "post") do %>
 <div class= "message-label">
  <%= label_tag(:number, "Phone Number:") %>
- </div>
   <%= telephone_field(:number, :phone, class: "form-control") %>
-
+  <div>
   <% @accounts.each do |account| %>
     <%= check_box_tag 'account_urls[]', account.url, class: "form-check-input" %>
     <%= label_tag(:account_name, account.name) %>
