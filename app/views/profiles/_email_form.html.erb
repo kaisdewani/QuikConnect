@@ -1,9 +1,9 @@
 <%= form_tag("messages/email", method: "post") do %>
- <%= label_tag(:string, "Email :") %>
- <%= email_field(:string, :email, class:"form-control") %>
+ <%= label_tag(:string, "Email :" ) %>
+ <%= email_field(:string, :email, class:"form-control",  style: ' width: 50%;  margin: 0 auto;') %>
  <% @accounts.each do |account| %>
+  <%= check_box_tag 'account_urls[]', account.url %>
     <%= label_tag(:account_name, account.name) %>
-    <%= check_box_tag 'account_urls[]', account.url %>
   <% end %>
    <br>
    <br>
