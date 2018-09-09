@@ -32,7 +32,7 @@ class ProfilesController < ApplicationController
 
   def update
     @profile.update(profile_params)
-    redirect_to edit_profiles_path, notice: "Successfully updated profile!"
+    redirect_to profiles_path, notice: "Successfully updated profile!"
   end
 
   private

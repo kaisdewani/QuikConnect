@@ -1,9 +1,16 @@
 <div class="card card-profile text-center">
+<br>
+<br>
 <h2><%= "#{@profile.first_name}" %><%= " #{@profile.last_name}"%></h2>
 <h3><%= "Phone Number: #{@profile.personal_phone}" %></h3>
-<h3><%= "Adress: #{@profile.personal_address}" %></h3>
-
+<h3><%= "Address: #{@profile.personal_address}" %></h3>
+<button type="button" class="btn btn-outline-secondary">
 <%= link_to 'Back', root_path %>
+</button>
+<button type="button" class="btn btn-outline-secondary">
 <%= link_to 'Edit', edit_profiles_path(@profile)%>
+</button>
+<button type="button" class="btn btn-outline-secondary">
 <%= link_to 'Delete', profiles_path(@profile), method: :delete, data: { confirm: "Are You Sure?" }%>
+</button>
 </div>

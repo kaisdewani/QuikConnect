@@ -1,20 +1,27 @@
 <div class="card card-profile text-center">
+<br>
+<br>
 <h1>Current Accounts</h1>
-</br>
+<br>
 
 <ul class="list-unstyled">
 <%= form_tag shares_path do %>
   <% @accounts.each do |account| %>
     <li><h3><%= account.name%> | <%= account.url%></h3> </li>
+    <button type="button" class="btn btn-outline-secondary">
   <%= link_to "Delete", account_path(account.id), :method => :delete %>
+  </button>
+  <button type="button" class="btn btn-outline-secondary">
 <%= link_to "Edit", edit_account_path(account.id)  %>
+</button>
   <% end %>
 <% end %>
 </ul>
 </br>
 </br>
-
+<button type="button" class="btn btn-outline-secondary">
 <%= link_to "Add New account", new_account_path %>
+</div>
 </div>
 
 
