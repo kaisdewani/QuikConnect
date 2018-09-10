@@ -23,9 +23,7 @@ class MessagesController < ApplicationController
       def email 
         email = params.fetch("string").fetch("email")
         account_urls = params.fetch("account_urls")
-        message = ""
-        account_urls.each{| url | message += "#{url}\n" }
-        AccountMailer.new_message(email,message).deliver_later
+        AccountMailer.with(email: email, account_urls: account_urls).new_message.deliver_later
       end 
 
       def text

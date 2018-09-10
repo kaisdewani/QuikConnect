@@ -3,5 +3,7 @@
 <p>Here are links to my profiles so we can get connected easily.</p>
 
 <p>
-  <%= @email_message %>
+  <% @account_urls.each do |url| %>
+    <%= url %><br>  
+  <% end %>
 </p>

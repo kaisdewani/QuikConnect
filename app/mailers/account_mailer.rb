@@ -5,12 +5,9 @@ class AccountMailer < ApplicationMailer
   #
   #   en.account_mailer.new_message.subject
   #
-  def new_message(email,message)
-    @email = email
-    @email_message = message
-
-    # @url  = 'http://example.com/login'
+  def new_message
+    @email = params[:email]
+    @account_urls = params[:account_urls]
     mail(to: @email, subject: 'Welcome to My Awesome Site')
-      
   end
 end
