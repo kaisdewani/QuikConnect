@@ -10,9 +10,10 @@ $facebook-color: #3b5999;
 
 body {
   // background-color: #273f72 !important;
-  background-image:url("darker-blue.jpg") ;
+  background-image:url("background.jpg") ;
     color:rgb(87, 123, 177) !important;
     font-family:'Lucida Grande' !important;
+    background-size: auto;
   a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
