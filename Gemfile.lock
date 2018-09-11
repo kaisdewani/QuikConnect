@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/stympy/faker.git
-  revision: 86a9fcf5c1867fcbac9750925e0b3820570613b8
+  revision: 844b3259b5f3c28e09baedc99b4fb77382342429
   branch: master
   specs:
     faker (1.9.1)
@@ -14,7 +14,7 @@ GEM
       nio4r (~> 2.0)
       websocket-driver (>= 0.6.1)
     actionmailer (5.2.1)
-      actionpack (~> 5.2.0, >= 4.2)
+      actionpack (= 5.2.1)
       actionview (= 5.2.1)
       activejob (= 5.2.1)
       mail (~> 2.5, >= 2.5.4)
@@ -55,18 +55,16 @@ GEM
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (9.1.3)
+    autoprefixer-rails (9.1.4)
       execjs
     bcrypt (3.1.12)
     bindex (0.5.0)
-    bootsnap (1.3.1)
-      msgpack (~> 1.0)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     builder (3.2.3)
     byebug (10.0.2)
-    capybara (3.6.0)
+    capybara (3.7.1)
       addressable
       mini_mime (>= 0.1.3)
       nokogiri (~> 1.8)
@@ -125,7 +123,6 @@ GEM
     mini_mime (1.0.1)
     mini_portile2 (2.3.0)
     minitest (5.11.3)
-    msgpack (1.2.4)
     multi_json (1.13.1)
     multipart-post (2.0.0)
     nio4r (2.3.1)
@@ -173,7 +170,7 @@ GEM
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
-    rubyzip (1.2.1)
+    rubyzip (1.2.2)
     sass (3.5.7)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -209,7 +206,7 @@ GEM
     turbolinks (5.2.0)
       turbolinks-source (~> 5.2)
     turbolinks-source (5.2.0)
-    twilio-ruby (5.12.3)
+    twilio-ruby (5.12.4)
       faraday (~> 0.9)
       jwt (>= 1.5, <= 2.5)
       nokogiri (>= 1.6, < 2.0)
@@ -219,7 +216,7 @@ GEM
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
-    web-console (3.6.2)
+    web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
@@ -234,7 +231,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootsnap (>= 1.1.0)
   bootstrap-sass
   byebug
   capybara (>= 2.15)
