@@ -11,12 +11,12 @@ class UsersController < ApplicationController
     p [number, message]
     client = Twilio::REST::Client.new
     options = {
-      from: "#{User.email}"
+      from: "#{User.email}",
       to: 'misspena21@gmail.com',
       body: message
     }
     p options
     p client.messages.create(options)
   end
-  end
+end
   
