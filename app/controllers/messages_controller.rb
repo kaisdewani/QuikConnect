@@ -36,7 +36,7 @@ class MessagesController < ApplicationController
         client = Twilio::REST::Client.new
         options = {
           from: Rails.application.secrets.twilio_phone_number,
-          to: '+13059154158',
+          to: '+19546828911',
           body: message
         }
         p options
