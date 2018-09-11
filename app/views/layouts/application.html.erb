@@ -18,9 +18,11 @@
       <div class="container">
         <div class = "navbar-header">
           <%= link_to "Home", root_path, class: "navbar-brand"%>
+           <% if user_signed_in? %>
           <%= link_to 'Accounts', accounts_path, class: "navbar-brand" %>
            <%= link_to 'Profile', profiles_path, class: "navbar-brand" %>
         </div>
+          <% end %>
 
         <ul class="nav navbar-nav">
         <% if user_signed_in? %>
