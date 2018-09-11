@@ -8,6 +8,6 @@ class AccountMailer < ApplicationMailer
   def new_message
     @email = params[:email]
     @account_urls = params[:account_urls]
-    mail(to: @email, subject: 'Welcome to My Awesome Site')
+    mail(to: @email, subject: 'QuikConnect')
   end
 end
