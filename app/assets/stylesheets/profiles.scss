@@ -10,7 +10,7 @@ $facebook-color: #3b5999;
 
 body {
   // background-color: #273f72 !important;
-  background-image:url("background.jpg") ;
+  background-image:url("darker-blue.jpg") ;
     color:rgb(87, 123, 177) !important;
     font-family:'Lucida Grande' !important;
     background-size: auto;
@@ -20,6 +20,18 @@ body {
   }
   a:hover { color:rgb(86, 88, 86); }
 
+}
+
+.landing-page {
+  size:20px;
+  margin: 400px;
+  margin: auto;
+  width: 80%;
+  height: 80%;
+  border: solid rgb(16, 17, 16);
+  padding: 100px;
+  background-color: #e6e5e1;
+  text-align: center;
 }
 .navbar-brand-one{
     left: 700px;
@@ -73,6 +85,11 @@ a { color: inherit; }
 .btn-outline-secondary{
   
   color: inherit; 
+}
+.btn-outline-secondary-landing {
+  color: inherit; 
+  margin: 40px;
+ 
 }
 
 
@@ -133,22 +150,6 @@ a { color: inherit; }
         
         &:hover {
           color: darken($dribbble-color, 10%);
-        }
-      }
-
-      &.fa-twitter {
-        color: $twitter-color;
-
-        &:hover {
-          color: darken($twitter-color, 10%);
-        }
-      }
-      
-      &.fa-facebook {
-        color: $facebook-color;
-
-        &:hover {
-          color: darken($facebook-color, 10%);
         }
       }
     }
